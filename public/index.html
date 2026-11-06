@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Online Library Management System</h1>
+
+    <!-- Add Book Form -->
+    <div class="card">
+      <h2>Add New Book</h2>
+      <form id="addBookForm">
+        <input type="text" id="title" placeholder="Book Title" required>
+        <input type="text" id="author" placeholder="Author Name" required>
+        <input type="text" id="isbn" placeholder="ISBN Number" required>
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
+
+    <!-- Search & Filter -->
+    <div class="card">
+      <h2>Search Books</h2>
+      <input type="text" id="searchInput" placeholder="Search by title or author..." onkeyup="searchBooks()">
+    </div>
+
+    <!-- Book List Table -->
+    <div class="card">
+      <h2>Book Inventory</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Status</th>
+            <th>Issued To</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="bookTableBody">
+          <!-- Dynamic Content -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
